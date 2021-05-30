@@ -1,0 +1,99 @@
+NAME
+    File::Find::Rule::DjVu - Common rules for searching DjVu files.
+
+SYNOPSIS
+     use File::Find::Rule;
+     use File::Find::Rule::DjVu;
+
+     my @files = File::Find::Rule->djvu->in($dir);
+     my @files = File::Find::Rule->djvu_chunk($chunk_name)->in($dir);
+
+DESCRIPTION
+    This Perl module contains File::Find::Rule rules for detecting DjVu
+    files.
+
+    See DjVu on Wikipedia <https://en.wikipedia.org/wiki/DjVu>.
+
+SUBROUTINES
+  "djvu"
+     my @files = File::Find::Rule->djvu->in($dir);
+
+    The "djvu" rule detect DjVu files.
+
+  "djvu_chunk"
+     my @files = File::Find::Rule->djvu_chunk($chunk_name)->in($dir);
+
+    The "djvu_chunk($chunk_name)" rule detect DjVu files with chunk name
+    (e.g. INFO).
+
+EXAMPLE1
+     use strict;
+     use warnings;
+
+     use File::Find::Rule;
+     use File::Find::Rule::DJVU;
+
+     # Arguments.
+     if (@ARGV < 2) {
+             print STDERR "Usage: $0 dir djvu_chunk\n";
+             exit 1;
+     }
+     my $dir = $ARGV[0];
+     my $djvu_chunk = $ARGV[1];
+
+     # Print all DjVu files in directory with chunk.
+     foreach my $file (File::Find::Rule->djvu_chunk($djvu_chunk)->in($dir)) {
+             print "$file\n";
+     }
+
+     # Output like:
+     # Usage: qr{[\w\/]+} dir
+
+EXAMPLE2
+     use strict;
+     use warnings;
+
+     use File::Find::Rule;
+     use File::Find::Rule::DJVU;
+
+     # Arguments.
+     if (@ARGV < 1) {
+             print STDERR "Usage: $0 dir\n";
+             exit 1;
+     }
+     my $dir = $ARGV[0];
+
+     # Print all DjVu files in directory.
+     foreach my $file (File::Find::Rule->djvu->in($dir)) {
+             print "$file\n";
+     }
+
+     # Output like:
+     # Usage: qr{[\w\/]+} dir
+
+DEPENDENCIES
+    DjVu::Detect, File::Find::Rule.
+
+SEE ALSO
+    DjVu::Detect
+        Detect DjVu files.
+
+    File::Find::Rule
+        Alternative interface to File::Find.
+
+REPOSITORY
+    <https://github.com/michal-josef-spacek/File-Find-Rule-DjVu>
+
+AUTHOR
+    Michal Josef Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    © Michal Josef Špaček 2021
+
+    BSD 2-Clause License
+
+VERSION
+    0.01
+

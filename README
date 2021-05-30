@@ -31,7 +31,7 @@ EXAMPLE1
      use warnings;
 
      use File::Find::Rule;
-     use File::Find::Rule::DJVU;
+     use File::Find::Rule::DjVu;
 
      # Arguments.
      if (@ARGV < 2) {
@@ -54,7 +54,7 @@ EXAMPLE2
      use warnings;
 
      use File::Find::Rule;
-     use File::Find::Rule::DJVU;
+     use File::Find::Rule::DjVu;
 
      # Arguments.
      if (@ARGV < 1) {

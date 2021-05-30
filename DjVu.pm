@@ -76,7 +76,7 @@ The C<djvu_chunk($chunk_name)> rule detect DjVu files with chunk name (e.g. INFO
  use warnings;
 
  use File::Find::Rule;
- use File::Find::Rule::DJVU;
+ use File::Find::Rule::DjVu;
 
  # Arguments.
  if (@ARGV < 2) {
@@ -100,7 +100,7 @@ The C<djvu_chunk($chunk_name)> rule detect DjVu files with chunk name (e.g. INFO
  use warnings;
 
  use File::Find::Rule;
- use File::Find::Rule::DJVU;
+ use File::Find::Rule::DjVu;
 
  # Arguments.
  if (@ARGV < 1) {

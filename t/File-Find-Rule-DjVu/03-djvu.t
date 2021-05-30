@@ -13,6 +13,8 @@ my $data_dir = File::Object->new->up->dir('data')->set;
 my @ret = File::Find::Rule->djvu->relative->in($data_dir->s);
 is_deeply(
 	\@ret,
-	['only-magic-string.djvu'],
+	[
+		'11a7ffc0-c61e-11e6-ac1c-001018b5eb5c.djvu',
+	],
 	'Get DjVu files in data directory.',
 );

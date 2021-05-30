@@ -13,6 +13,6 @@ my $data_dir = File::Object->new->up->dir('data')->set;
 my @ret = File::Find::Rule->djvu_chunk('INFO')->relative->in($data_dir->s);
 is_deeply(
 	\@ret,
-	['chunk_INFO.djvu'],
+	['11a7ffc0-c61e-11e6-ac1c-001018b5eb5c.djvu'],
 	'Get DjVu files with INFO chunk in data directory.',
 );

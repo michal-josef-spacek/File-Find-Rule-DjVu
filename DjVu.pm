@@ -140,6 +140,11 @@ Alternative interface to File::Find.
 
 L<https://github.com/michal-josef-spacek/File-Find-Rule-DjVu>
 
+=head1 TEST FILES
+
+Test file 11a7ffc0-c61e-11e6-ac1c-001018b5eb5c.djvu is generated from scanned
+book edition from L<http://www.digitalniknihovna.cz/mzk/view/uuid:814e66a0-b6df-11e6-88f6-005056827e52?page=uuid:11a7ffc0-c61e-11e6-ac1c-001018b5eb5c>
+
 =head1 AUTHOR
 
 Michal Josef Špaček L<mailto:skim@cpan.org>

@@ -18,6 +18,7 @@ name 'File-Find-Rule-DjVu';
 perl_version 5.006002;
 readme_from 'DjVu.pm';
 recursive_author_tests('xt');
+requires 'DjVu::Detect' => 0;
 requires 'File::Find::Rule' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/File-Find-Rule-DjVu/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/File-Find-Rule-DjVu';

@@ -56,6 +56,13 @@ This Perl module contains File::Find::Rule rules for detecting DjVu files.
 
 See L<DjVu on Wikipedia|https://en.wikipedia.org/wiki/DjVu>.
 
+This rule provides functionality for findrule script in directory with djvu
+files in ways:
+
+ findrule -djvu
+
+ findrule -djvu_chunk INFO
+
 =head1 SUBROUTINES
 
 =head2 C<djvu>

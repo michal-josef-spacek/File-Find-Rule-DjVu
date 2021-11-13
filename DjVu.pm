@@ -6,7 +6,7 @@ use warnings;
 
 use DjVu::Detect qw(detect_djvu_chunk detect_djvu_file);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 sub File::Find::Rule::djvu {
 	my $file_find_rule = shift;
@@ -166,6 +166,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
